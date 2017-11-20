@@ -2,7 +2,8 @@
 
 #define NUM_LEDS 24
 #define DATA_PIN 11
-#define CLOCK_PIN 13
+
+const byte buttonPin = 13;
 
 CRGB leds[NUM_LEDS];
 static uint8_t heatIndex = 0;
@@ -10,7 +11,6 @@ static uint8_t heatIndex = 0;
 void setup()
 {
 	FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
-	const byte buttonPin = 13;
 	pinMode(buttonPin, INPUT_PULLUP);
 }
 
