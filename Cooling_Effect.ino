@@ -16,7 +16,7 @@ void setup()
 
 void loop()
 {
-	if (digitalRead(buttonPin) != LOW && heatIndex == 0)
+	if (digitalRead(buttonPin) == LOW && heatIndex == 0)
 	{
 		heatIndex = 90;
 	}
